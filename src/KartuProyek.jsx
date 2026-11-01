@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 // Komponen untuk menampilkan kartu proyek
@@ -65,5 +64,4 @@ function KartuProyek({ judul, deskripsi, teknologi, githubUrl }) {
     </div>
   );
 }
-
 export default KartuProyek;

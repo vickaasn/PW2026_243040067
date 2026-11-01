@@ -105,8 +105,6 @@ Pengenalan React JS & Vite</p>
         </div>
       </section>
 
- 
-     
       <section style={{ marginBottom: '32px' }}>
         <h2 style={{
           color: '#2C3E50',
