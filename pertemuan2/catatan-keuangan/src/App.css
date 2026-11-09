@@ -1,0 +1,356 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+:root {
+  --bg-main: #081426;
+  --bg-card: #101f35;
+  --bg-card-light: #172943;
+  --primary: #4d8dff;
+  --primary-hover: #3678eb;
+  --text-main: #f1f5fc;
+  --text-muted: #91a3bd;
+  --border: #243752;
+  --green: #35d39a;
+  --red: #ff7185;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+/* HALAMAN UTAMA */
+
+.wadah {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 55px 0 70px;
+}
+
+/* HEADER */
+
+.header {
+  margin-bottom: 38px;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  color: var(--text-main);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 750;
+  letter-spacing: -1.2px;
+}
+
+.header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* RINGKASAN KEUANGAN */
+
+.ringkasan-keuangan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.ringkasan-keuangan > div {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--bg-card);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ringkasan-keuangan > div:hover {
+  transform: translateY(-3px);
+  border-color: #41628d;
+}
+
+.ringkasan-keuangan h3 {
+  margin: 0 0 17px;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ringkasan-keuangan h2 {
+  margin: 0;
+  font-size: clamp(20px, 2.5vw, 27px);
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  overflow-wrap: anywhere;
+}
+
+.kartu-saldo {
+  background: linear-gradient(135deg, #173b70, #102746) !important;
+  border-color: #315b91 !important;
+}
+
+.kartu-saldo h3 {
+  color: #c0d7fa;
+}
+
+.kartu-saldo h2 {
+  color: #ffffff;
+}
+
+.kartu-pemasukan h2 {
+  color: var(--green);
+}
+
+.kartu-pengeluaran h2 {
+  color: var(--red);
+}
+
+/* KARTU FORM */
+
+.kartu {
+  padding: 28px;
+  margin-bottom: 25px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--bg-card);
+}
+
+.kartu > h2 {
+  margin: 0 0 25px;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+/* FORM TRANSAKSI */
+
+.form-transaksi {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.grup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.grup-form label {
+  color: #c8d5e8;
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.grup-form input,
+.grup-form select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 15px;
+  color: var(--text-main);
+  background: #0b192c;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.grup-form input::placeholder {
+  color: #667b98;
+}
+
+.grup-form input:focus,
+.grup-form select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(77, 141, 255, 0.13);
+}
+
+.grup-form select option {
+  background: #101f35;
+  color: white;
+}
+
+/* TOMBOL */
+
+.tombol {
+  min-height: 48px;
+  padding: 12px 20px;
+  color: white;
+  background: var(--primary);
+  border: none;
+  border-radius: 11px;
+  font-weight: 650;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.tombol:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* DAFTAR TRANSAKSI */
+
+.daftar-transaksi {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--bg-card);
+}
+
+.daftar-transaksi h2 {
+  margin: 0 0 22px;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.item-transaksi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.item-transaksi:last-child {
+  border-bottom: none;
+}
+
+.item-transaksi h3,
+.item-transaksi p {
+  margin: 0;
+}
+
+.item-transaksi h3 {
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.item-transaksi p {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.teks-masuk {
+  color: var(--green);
+  font-weight: 650;
+}
+
+.teks-keluar {
+  color: var(--red);
+  font-weight: 650;
+}
+
+.kosong {
+  padding: 35px 15px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .wadah {
+    width: 92%;
+    padding: 35px 0 50px;
+  }
+
+  .ringkasan-keuangan {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .ringkasan-keuangan > div {
+    padding: 21px;
+  }
+
+  .kartu,
+  .daftar-transaksi {
+    padding: 21px;
+  }
+}
+
+@media (max-width: 420px) {
+  .item-transaksi {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* PREMIUM SUMMARY CARDS */
+
+.ringkasan-keuangan > div {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+}
+
+.kartu-saldo {
+  background: linear-gradient(
+    125deg,
+    #1b477d 0%,
+    #12335b 55%,
+    #10243f 100%
+  ) !important;
+  box-shadow: 0 12px 30px rgba(30, 91, 160, 0.15);
+}
+
+.kartu-saldo::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -45px;
+  top: -65px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.kartu-pemasukan {
+  background: linear-gradient(145deg, #122b35, #101f35) !important;
+}
+
+.kartu-pengeluaran {
+  background: linear-gradient(145deg, #33202e, #101f35) !important;
+}
+
+.ringkasan-keuangan h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.ringkasan-keuangan h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.ringkasan-keuangan > div:hover {
+  transform: translateY(-5px);
+  transition: all 0.25s ease;
+}
